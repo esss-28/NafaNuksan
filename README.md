@@ -48,7 +48,6 @@ We built **नफाNuksan** to bridge this gap.
 - **Missed Opportunities**: Without insights, businesses mismanage inventory, fail to forecast demand, and lose customers.  
 
 👉 Bottom Line: SMEs have **limitless ambition** but **limited tools**.  
-
 ---
 
 ## 💡 Our Solution  

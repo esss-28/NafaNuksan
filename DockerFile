@@ -1,0 +1,32 @@
+# Stage 1: Build the application
+# Use an official Node runtime to build the app
+FROM node:18-alpine AS build
+
+# Set the working directory inside the container
+WORKDIR /usr/src/app
+
+# Copy package files and install dependencies first (for better caching)
+COPY package*.json ./
+RUN npm ci --only=production
+
+# Copy the rest of the source code
+COPY . .
+
+# Build the optimized production version of your app
+RUN npm run build
+
+# Stage 2: Serve the built app with a lightweight web server
+# Use a very small, secure web server image
+FROM nginx:alpine
+
+# Copy the built app from the previous stage to the nginx serving directory
+COPY --from=build /usr/src/app/dist /usr/share/nginx/html
+
+# Copy a custom nginx configuration (optional, but good for SPAs)
+# COPY nginx.conf /etc/nginx/nginx.conf
+
+# Tell Docker the container will listen on port 80 (nginx's default port)
+EXPOSE 80
+
+# The command to start nginx when the container starts
+CMD ["nginx", "-g", "daemon off;"]
