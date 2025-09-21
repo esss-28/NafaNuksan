@@ -1,0 +1,296 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Vyaaparik Design System - Indian Business Intelligence Platform */
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    /* Indian Business Heritage Colors */
+    --primary: 25 95% 53%; /* Saffron - Energy & Innovation */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 25 100% 65%;
+
+    --secondary: 120 100% 25%; /* Deep Green - Growth & Prosperity */
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 220 13% 18%; /* Charcoal Blue - Trust & Stability */
+    --accent-foreground: 0 0% 100%;
+
+    /* UI Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 25 95% 53%;
+
+    /* Success & Error */
+    --success: 120 100% 25%;
+    --success-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-business: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--primary)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--primary)));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.8), hsl(0 0% 100% / 0.4));
+
+    /* Shadows */
+    --shadow-business: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.1);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.4);
+
+    /* Animation Variables */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode for Vyaaparik */
+    --background: 220 13% 18%;
+    --foreground: 0 0% 95%;
+    --card: 220 13% 20%;
+    --card-foreground: 0 0% 95%;
+    --primary: 25 95% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 120 100% 25%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 220 13% 15%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --border: 220 13% 25%;
+    --input: 220 13% 25%;
+    --ring: 25 95% 53%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* Business Card Styles */
+  .business-card {
+    @apply bg-card border border-border rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300;
+    background: var(--gradient-card);
+    backdrop-filter: blur(20px);
+  }
+
+  .business-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-business);
+  }
+
+  /* Hero Button Variants */
+  .btn-hero {
+    @apply px-8 py-4 rounded-xl font-semibold text-lg;
+    background: var(--gradient-primary);
+    color: hsl(var(--primary-foreground));
+    box-shadow: var(--shadow-business);
+    transition: var(--transition-smooth);
+  }
+
+  .btn-hero:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+  }
+
+  .btn-business {
+    @apply px-6 py-3 rounded-lg font-medium;
+    background: var(--gradient-business);
+    color: hsl(var(--secondary-foreground));
+    transition: var(--transition-smooth);
+  }
+
+  .btn-business:hover {
+    transform: scale(1.05);
+  }
+
+  /* Upload Zone Styles */
+  .upload-zone {
+    @apply border-2 border-dashed border-border rounded-xl p-8 text-center;
+    background: var(--gradient-card);
+    transition: var(--transition-bounce);
+  }
+
+  .upload-zone:hover {
+    border-color: hsl(var(--primary));
+    background: linear-gradient(145deg, hsl(var(--primary) / 0.1), hsl(var(--primary-glow) / 0.05));
+    transform: scale(1.02);
+  }
+
+  .upload-zone.dragover {
+    border-color: hsl(var(--primary));
+    background: linear-gradient(145deg, hsl(var(--primary) / 0.2), hsl(var(--primary-glow) / 0.1));
+    transform: scale(1.05);
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Animation Classes */
+  .fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .slide-up {
+    animation: slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .bounce-in {
+    animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
+
+  .glow-pulse {
+    animation: glowPulse 2s ease-in-out infinite;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.6);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Fix Google Translate styles */
+.goog-te-gadget {
+  font-family: inherit !important;
+  color: transparent !important;
+}
+
+.goog-te-gadget .goog-te-combo {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background-color: white;
+  color: #374151;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.goog-te-gadget .goog-te-combo:hover {
+  border-color: #9ca3af;
+}
+
+/* Hide Google branding */
+.goog-logo-link, .goog-te-banner-frame {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+/* Google Translate Styles */
+.goog-te-combo {
+  padding: 8px 12px !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(251, 146, 60, 0.3) !important;
+  background: rgba(0, 0, 0, 0.2) !important;
+  backdrop-filter: blur(10px) !important;
+  color: #fbbf24 !important;
+  font-size: 14px !important;
+  cursor: pointer !important;
+  min-width: 140px !important;
+}
+
+.goog-te-combo:hover {
+  border-color: rgba(251, 146, 60, 0.6) !important;
+  background: rgba(0, 0, 0, 0.3) !important;
+}
