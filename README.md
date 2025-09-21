@@ -1,31 +1,7 @@
-Perfect 👍 since you’d like a **more extensive README**, I’ll expand it to feel like a polished project showcase — almost like a startup pitch deck turned into GitHub documentation. It’ll include **background, motivation, system architecture, detailed features, installation guide, usage instructions, and future scope**.
-
-Here’s the extended **README.md**:
-
----
-
-````markdown
 # नफाNuksan – The Indian SME Business Co-pilot 🇮🇳  
 
 > **Democratizing Intelligence for Every Indian Business.**  
 > Helping 63M+ Indian SMEs turn data chaos into growth with AI-powered insights.  
-
----
-
-## 📌 Table of Contents
-1. [Background](#-background)  
-2. [Problem Statement](#-problem-statement)  
-3. [Our Solution](#-our-solution)  
-4. [How It Works](#-how-it-works)  
-5. [Features](#-features)  
-6. [Tech Stack](#-tech-stack)  
-7. [System Architecture](#-system-architecture)  
-8. [Use Cases](#-use-cases)  
-9. [Installation & Setup](#-installation--setup)  
-10. [Usage](#-usage)  
-11. [Future Scope](#-future-scope)  
-12. [Team](#-team)  
-13. [Links](#-links)  
 
 ---
 
@@ -59,15 +35,6 @@ We built **नफाNuksan** to bridge this gap.
 - **Cultural Intelligence** – Considers Indian festivals, local demand cycles, and APEDA exports.  
 
 We **replace expensive consultants** with an AI partner that’s always available, affordable, and scalable.  
-
----
-
-## ⚙️ How It Works  
-
-**3 Magic Steps**:  
-1. **Connect Data** – Upload customer reviews, sales, and inventory data securely.  
-2. **Ask Questions** – “Why are my profits down?”, “Should I run a Diwali discount?”, “Compare last year vs this year.”  
-3. **Get AI Wisdom** – Actionable insights, growth plans, and forecasts tailored for your business.  
 
 ---
 
@@ -143,8 +110,8 @@ flowchart TD
 1. Clone the repository
 
    ```bash
-   git clone https://github.com/<your-username>/nafaanuksan.git
-   cd nafaanuksan
+   git clone https://github.com/esss-28/NafaNuksan.git
+   cd NafaNuksan
    ```
 2. Install dependencies
 
@@ -191,29 +158,12 @@ Example queries:
 
 ---
 
-## 👩‍💻 Team
-
-* 👩‍💻 **Seher Siddiqui** – Team Leader
-* 👩 **Angel Jain** – Developer
-* 👩 **Tanvi N. Paithankar** – Research & Testing
-
----
-
-## 🔗 Links
-
-* **GitHub Repo**: \[link here]
-* **Deployed App**: \[link here]
-* **Demo Video**: \[YouTube link here]
-
----
-
 ## 🙏 Acknowledgements
 
 Special thanks to:
 
 * Google Gemini team for providing cutting-edge AI models.
 * Indian SME networks for feedback on features.
-* Our mentors & peers for guidance.
 
 ---
 
@@ -221,10 +171,3 @@ Special thanks to:
 
 > SMEs deserve **world-class intelligence without world-class costs**.
 > With नफाNuksan, we’re on a mission to empower every Indian business to thrive, not just survive.
-
-```
-
----
-
-Would you like me to also **design badges (e.g. npm, build, license, stars, PRs welcome)** for the top of the README so it looks professional and GitHub-standard?
-```
